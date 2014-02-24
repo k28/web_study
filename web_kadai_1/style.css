@@ -1,0 +1,23 @@
+h1 {
+    color: white;
+    background-color:#505050
+}
+
+.strong {
+    font-style:italic;
+}
+
+.note {
+    font-size:small;
+}
+
+#abstract {
+    text-align:center;
+    width:60%;
+    border-width: 10px;
+    border-style: outset;
+}
+
+div > p.note {
+    font-size:xx-large;
+}
