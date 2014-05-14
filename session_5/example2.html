@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">google.load("jquery","1.5.0");</script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+                $("#button").click(function(){
+                    $("#target").show('slow')
+                    });
+                });
+    </script>
+    <title>クリックした時の動作</title>
+</head>
+<body>
+    <p><button id='button'>クリック</button></p>
+    <div id="target" style="display: none; width: 150px; height 150px; background-color: red;">
+        クリックしたね
+    </div>
+</body>
+</html>
+
