@@ -11,10 +11,12 @@
             google.load("jquery", "1.5.0");
         </script>
         <script type="text/javascript" src="googlemaps.js"></script>
-        <title>固定の位置を中心とする地図</title>
+        <title>固定の住所中心とする地図</title>
     </head>
     <body>
         <p>
+            <input id="address" type="text" value="" size="50"/>
+            <button id="button">地図を表示</button>
         </p>
         <div id="map_canvas" style="width: 100%; height: 90%;"></div>
     </body>

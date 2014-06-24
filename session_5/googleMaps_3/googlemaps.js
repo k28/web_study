@@ -1,0 +1,30 @@
+$(document).ready(function(){
+    $("#button").click(function(){
+        var address = $("#address").val(); // 住所を取得
+        console.log("kita kita");
+        drawMap(address);
+    });
+});
+
+function createMap(result, status) {
+    if ( status == google.maps.GeocoderStatus.OK ) {
+        console.log(result);
+        var myPosition = result[0].geometry.location;
+        var myOptions = {
+            zoom : 13,
+            center : myPosition,
+            mapTypeId : google.maps.MapTypeId.ROADMAP
+        };
+
+        var myMap = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    }
+}
+
+function drawMap(myAddress) {
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({
+        address : myAddress
+    }, createMap); // コールバックを指定
+}
+
